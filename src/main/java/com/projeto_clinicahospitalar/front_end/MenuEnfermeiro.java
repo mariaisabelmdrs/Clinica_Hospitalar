@@ -25,7 +25,7 @@ public class MenuEnfermeiro extends javax.swing.JFrame {
             }
         });
 
-        consultarEnfer.setText("Consultar / Atualizar / Apagar");
+        consultarEnfer.setText("Consultar / Editar / Apagar");
         consultarEnfer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 consultarEnferActionPerformed(evt);

@@ -3,6 +3,7 @@ package com.projeto_clinicahospitalar.front_end;
 import com.projeto_clinicahospitalar.back_end.Enfermeiro;
 import com.projeto_clinicahospitalar.back_end.Genero;
 import com.projeto_clinicahospitalar.back_end.ListasDeControle;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
@@ -207,7 +209,8 @@ public class CrudEnfermeiro extends javax.swing.JFrame {
         JTextField cargaHorariaSemanalField = new JTextField(e.getCargaHorariaSemanal());
         
         
-        JPanel panel = new JPanel(new GridLayout(0, 1));
+        JPanel panel = new JPanel(new GridLayout(0, 2, 2, 5));
+        panel.setPreferredSize(new Dimension(500, 600));
         panel.add(new JLabel("Nome Completo:"));
         panel.add(nomeField);
         panel.add(new JLabel("Data Nascimento:"));
@@ -238,6 +241,8 @@ public class CrudEnfermeiro extends javax.swing.JFrame {
         panel.add(new JLabel("Carga Horária Semanal:"));
         panel.add(cargaHorariaSemanalField);
 
+        JScrollPane scrollPane = new JScrollPane(panel);
+        scrollPane.setPreferredSize(new Dimension(250, 620));
         int result = JOptionPane.showConfirmDialog(this, panel, "Editar Enfermeiro",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 

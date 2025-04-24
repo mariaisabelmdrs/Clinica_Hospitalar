@@ -6,12 +6,14 @@ import static com.projeto_clinicahospitalar.back_end.ListasDeControle.ListaMedic
 import static com.projeto_clinicahospitalar.back_end.ListasDeControle.ListaPaciente;
 import com.projeto_clinicahospitalar.back_end.Medico;
 import com.projeto_clinicahospitalar.back_end.Paciente;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
@@ -202,7 +204,8 @@ public class CrudConsultaMedica extends javax.swing.JFrame {
             indCirurgiaoNao.setSelected(true);
         }
 
-        JPanel panel = new JPanel(new GridLayout(0, 1));
+        JPanel panel = new JPanel(new GridLayout(0, 2, 5, 5));
+        panel.setPreferredSize(new Dimension(500, 600));
         //panel.add(new JLabel("Médico Responsável:"));
         panel.add(medicoLabel);
         //panel.add(new JLabel("Paciente:"));
@@ -217,6 +220,8 @@ public class CrudConsultaMedica extends javax.swing.JFrame {
         panel.add(indCirurgiaoSim);
         panel.add(indCirurgiaoNao);
 
+        JScrollPane scrollPane = new JScrollPane(panel);
+        scrollPane.setPreferredSize(new Dimension(250, 620));
         int result = JOptionPane.showConfirmDialog(this, panel, "Editar Paciente",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 

@@ -3,6 +3,7 @@ package com.projeto_clinicahospitalar.front_end;
 import com.projeto_clinicahospitalar.back_end.Genero;
 import com.projeto_clinicahospitalar.back_end.Medico;
 import com.projeto_clinicahospitalar.back_end.ListasDeControle;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -231,7 +232,7 @@ public class CrudMedico extends javax.swing.JFrame {
         JTextField setorField = new JTextField(m.getSetor());
         JTextField cargaHorariaSemanalField = new JTextField(m.getCargaHorariaSemanal());
 
-        JPanel panel = new JPanel(new GridLayout(0, 1));
+        JPanel panel = new JPanel(new GridLayout(0, 2, 2, 5));
         panel.add(new JLabel("Nome Completo:"));
         panel.add(nomeField);
         panel.add(new JLabel("CRM:"));
@@ -266,8 +267,11 @@ public class CrudMedico extends javax.swing.JFrame {
         panel.add(setorField);
         panel.add(new JLabel("Carga Horária Semanal:"));
         panel.add(cargaHorariaSemanalField);
-
-        int result = JOptionPane.showConfirmDialog(this, panel, "Editar Paciente",
+        
+        
+        JScrollPane scrollPane = new JScrollPane(panel);
+        scrollPane.setPreferredSize(new Dimension(250, 620));
+        int result = JOptionPane.showConfirmDialog(this, panel, "Editar Medico",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
         if (result == JOptionPane.OK_OPTION) {

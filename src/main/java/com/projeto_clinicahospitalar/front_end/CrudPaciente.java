@@ -3,6 +3,7 @@ package com.projeto_clinicahospitalar.front_end;
 import com.projeto_clinicahospitalar.back_end.Genero;
 import com.projeto_clinicahospitalar.back_end.ListasDeControle;
 import com.projeto_clinicahospitalar.back_end.Paciente;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -10,6 +11,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
@@ -229,7 +231,8 @@ public class CrudPaciente extends javax.swing.JFrame {
         JTextField nomeRespField = new JTextField(p.getResponsavel().getNomeResponsavel());
         JTextField celularRespField = new JTextField(p.getResponsavel().getCelular());
 
-        JPanel panel = new JPanel(new GridLayout(0, 1));
+        JPanel panel = new JPanel(new GridLayout(0, 2, 5, 5));
+        panel.setPreferredSize(new Dimension(500, 600));
         panel.add(new JLabel("Nome Completo:"));
         panel.add(nomeField);
         panel.add(new JLabel("Idade:"));
@@ -261,6 +264,8 @@ public class CrudPaciente extends javax.swing.JFrame {
         panel.add(new JLabel("Celular do Responsável:"));
         panel.add(celularRespField);
 
+        JScrollPane scrollPane = new JScrollPane(panel);
+        scrollPane.setPreferredSize(new Dimension(250, 620));
         int result = JOptionPane.showConfirmDialog(this, panel, "Editar Paciente",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 

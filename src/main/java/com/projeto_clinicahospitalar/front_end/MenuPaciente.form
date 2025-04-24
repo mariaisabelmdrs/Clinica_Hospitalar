@@ -81,7 +81,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="consultarPaciente">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Consultar - Atualizar - Apagar"/>
+        <Property name="text" type="java.lang.String" value="Consultar - Editar - Apagar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="consultarPacienteActionPerformed"/>

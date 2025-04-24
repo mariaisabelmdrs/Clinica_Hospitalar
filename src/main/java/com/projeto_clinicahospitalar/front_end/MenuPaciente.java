@@ -34,7 +34,7 @@ public class MenuPaciente extends javax.swing.JFrame {
             }
         });
 
-        consultarPaciente.setText("Consultar - Atualizar - Apagar");
+        consultarPaciente.setText("Consultar - Editar - Apagar");
         consultarPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 consultarPacienteActionPerformed(evt);
