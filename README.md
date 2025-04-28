@@ -32,4 +32,6 @@ Apesar dos desafios enfrentados, o desenvolvimento deste projeto foi uma oportun
 
 Link para Vídeos: https://drive.google.com/drive/folders/1PXeGMYZmgmK4I_quhwc-hXYdo7HhXUSb?usp=share_link 
 
+Email para contato: mariamedeiros2003@hotmail.com
+
 
